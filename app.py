@@ -6,6 +6,13 @@ from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 import string
 
+def download_nltk_resources():
+    nltk.download('stopwords')
+    nltk.download('punkt')  # PorterStemmer may also require this
+
+# Download NLTK resources
+download_nltk_resources()
+
 ps = PorterStemmer()
 
 def transform_text(text):
